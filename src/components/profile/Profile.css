@@ -1,0 +1,20 @@
+.profile {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-avatar {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+  }
+  
