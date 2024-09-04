@@ -1,8 +1,10 @@
-# React + Vite
+# Github Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Avaliação da Unidade Curricular de Desenvolvimento Web.
+Usando React e a API do próprio GitHub, o site foi criado com páginas, Home e Issues.
 
-Currently, two official plugins are available:
+- Home
+  Irá mostrar um perfil do GitHub, informado dentro do código, mostrando o número de repositórios, seguindo e seguidores.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Issues
+  Essa tela mostra todos os issues de um repositório específico como se fossem cards, tendo também uma barra de pesquisa para consultas.
