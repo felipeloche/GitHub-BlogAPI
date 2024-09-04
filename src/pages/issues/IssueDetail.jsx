@@ -14,7 +14,7 @@ function IssueDetail(){
 
     const fetchIssue = async () => {
         try {
-            const response = await axios.get('https://api.github.com/search/issues?q=${searchText}repo:felipeloche/acervoAulasBruno/issues/${issueNumber');
+            const response = await axios.get(`https://api.github.com/repos/felipeloche/acervoAulasBruno/issues/${issueNumber}`);
             setIssue(response.data);
         } catch (error) {
             console.error('Erro ao buscar os detalhes da issue', error);

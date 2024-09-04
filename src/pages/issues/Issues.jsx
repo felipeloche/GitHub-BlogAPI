@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react";
 import axios from 'axios'
 import './Issues.css'
 import Card from '../../components/card/Card.jsx'
-//import Search from '../../components/search/Search.jsx'
+import Search from '../../components/search/Search.jsx'
 
 function Issues(){
     const [issues, setIssues] = useState([]);
@@ -14,7 +14,8 @@ function Issues(){
 
     const fetchIssues = async () => {
         try {
-            const response = await axios.get(`https://api.github.com/search/issues?q=repo:felipeloche/acervoAulasBruno`);
+            const query = searchText ? `${searchText} repo:felipeloche/acervoAulasBruno` : `repo:felipeloche/acervoAulasBruno`
+            const response = await axios.get(`https://api.github.com/search/issues?q=${query}`);
             setIssues(response.data.items);
         } catch(error) {
             console.error('Erro ao buscar issues', error);
@@ -23,9 +24,7 @@ function Issues(){
 
     return(
         <div className="issues">
-            {/*
             <Search searchText={searchText} setSearchText={setSearchText} />
-            */}
             <div className="issues-list">
                 {issues.map(issue => (
                     <Card key={issue.id} issue={issue} />
